@@ -26,6 +26,8 @@ class GeocodeclientImpl implements GeocodeClient {
       double latitude, double longitude, String apiKey) {
     String urlParams =
         "/$latitude,$longitude" + (apiKey != '' ? '&auth=' + apiKey +'&geoit=json': '');
+    
+    print("url parameters = " + urlParams);
 
     final Uri uri = Uri.https(url, urlParams);
 
